@@ -1,0 +1,22 @@
+<?php
+/** @var \ATF\ExchangeRate\Block\Rate\ExchangeBlock $block */
+$rates = $block->displayBlock();
+
+?>
+
+<?php if ($rates['success']): ?>
+    <?php
+    $count = count($rates['rates']);
+    $index = 0;
+    ?>
+    <ul class="header links">
+        <?php foreach ($rates['rates'] as $key => $value): ?>
+            <li><?= $key ?>: <?= $value ?></li>
+            <?php if ($index === 0): ?>
+                <li>to</li>
+            <?php endif; ?>
+            <?= $index++ ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+

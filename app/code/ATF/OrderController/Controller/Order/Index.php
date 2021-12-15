@@ -47,6 +47,8 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $id = $this->getRequest()->getParam('orderID');
+        $productId = (int) $this->getRequest()->getParam('orderID');
+        var_dump($productId); die();
 
         $data = [];
         $resultJson = $this->jsonFactory->create();
