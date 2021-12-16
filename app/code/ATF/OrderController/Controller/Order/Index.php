@@ -2,11 +2,11 @@
 
 namespace ATF\OrderController\Controller\Order;
 
+use Magento\Cms\Block\Page;
 use Magento\Framework\App\Action\Context;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Sales\Api\OrderItemRepositoryInterface;
 use Magento\Framework\Controller\Result\JsonFactory;
-use mysql_xdevapi\Exception;
 
 
 class Index extends \Magento\Framework\App\Action\Action
@@ -25,6 +25,7 @@ class Index extends \Magento\Framework\App\Action\Action
      * @var JsonFactory
      */
     protected JsonFactory $jsonFactory;
+
 
     /**
      * @param Context $context
@@ -47,8 +48,6 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $id = $this->getRequest()->getParam('orderID');
-        $productId = (int) $this->getRequest()->getParam('orderID');
-        var_dump($productId); die();
 
         $data = [];
         $resultJson = $this->jsonFactory->create();
@@ -82,4 +81,5 @@ class Index extends \Magento\Framework\App\Action\Action
 
 
     }
+
 }
