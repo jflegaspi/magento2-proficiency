@@ -1,0 +1,15 @@
+<?php
+
+/** @var \Magento\Framework\View\Element\Template $block */
+$data = $block->getData("order");
+$count = count($data);
+?>
+
+<?php if($count > 0) : ?>
+    <h1>Order Information</h1>
+    <ul>
+        <li>Status: <?= $data['status'] ?></li>
+        <li>Total: <?= $data['total'] ?></li>
+        <li>Total Invoiced Amount: <?= $data['total_invoiced'] ?></li>
+    </ul>
+<?php endif; ?>

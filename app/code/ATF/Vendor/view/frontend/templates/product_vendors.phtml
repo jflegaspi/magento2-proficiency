@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \ATF\Vendor\Block\ProductVendorBlock $block */
+$vendors = $block->getVendors();
+$count = count($vendors);
+?>
+
+<?php if($count > 0): ?>
+<ul>
+    <?php foreach ($vendors as $vendor):  ?>
+    <li><?= $vendor->getName() ?></li>
+    <?php endforeach; ?>
+</ul>
+<?php else: ?>
+
+<div>No Assigned Vendor(s) Found.</div>
+
+<?php endif; ?>
+

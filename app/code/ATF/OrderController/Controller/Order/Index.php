@@ -2,7 +2,6 @@
 
 namespace ATF\OrderController\Controller\Order;
 
-use Magento\Cms\Block\Page;
 use Magento\Framework\App\Action\Context;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Sales\Api\OrderItemRepositoryInterface;

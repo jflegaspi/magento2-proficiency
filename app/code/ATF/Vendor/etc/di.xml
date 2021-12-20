@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Product - Vendor Relation -->
+    <preference for="ATF\Vendor\Api\Data\VendorProductRelationInterface"
+                type="ATF\Vendor\Model\VendorProductRelation"/>
+
+    <preference for="ATF\Vendor\Api\Data\VendorInterface"
+                type="ATF\Vendor\Model\Vendor"/>
+
+</config>
